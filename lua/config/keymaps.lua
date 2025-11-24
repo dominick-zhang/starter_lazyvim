@@ -34,6 +34,7 @@ map("v", "<C-e>", "$", { desc = "Move cursor to the end of line" })
 -- 打開 terminal（下方）, or <leader>ws
 map("n", "<leader>`", function()
   vim.opt.splitbelow = true
+  vim.cmd.split()
   vim.cmd.terminal()
 end, { desc = "Open terminal below" })
 
