@@ -10,6 +10,9 @@ vim.opt.wrap = true
 -- 关闭自动格式化
 vim.g.autoformat = false
 
+--使用系统剪切板复制粘贴
+vim.opt.clipboard:append("unnamedplus")
+
 --tab配置4空格
 --vim.opt.tabstop = 4
 --vim.opt.softtabstop = 4
