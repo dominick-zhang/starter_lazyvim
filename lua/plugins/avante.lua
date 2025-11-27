@@ -10,11 +10,11 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
+      system_prompt = "你是资深中文程序员，请始终用中文表达你的推理过程和最终回答",
       -- add any opts here
       -- this file can contain specific instructions for your project
       instructions_file = "avante.md",
-      --support: copilot / openai / azure / claude / gemini / moonshot/ ollama /qianwen
-      provider = "moonshot",
+      provider = "skysoft",
       providers = {
         claude = {
           endpoint = "https://api.anthropic.com",
@@ -34,17 +34,19 @@ return {
             max_tokens = 32768,
           },
         },
+        qwen = {
+          endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1",
+          model = "qwen3-max",
+        },
         ollama = {
-          --endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
-          endpoint = "http://10.8.8.44/chat/skytalk",
+          endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
           model = "qwq:32b",
         },
-
-        qianwen = {
+        skysoft = {
           __inherited_from = "openai",
-          endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1",
-          api_key_name = "AVANTE_DASHSCOPE_API_KEY",
-          model = "qwen3-coder-plus",
+          endpoint = "http://10.8.8.44:8000/v1",
+          api_key_name = "",
+          model = "Qwen3-30B-A3B",
         },
       },
     },
