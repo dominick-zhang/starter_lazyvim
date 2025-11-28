@@ -9,6 +9,8 @@ return {
         "shfmt",
         "flake8",
         "clangd", --c/c++ lsp
+        "cortex-debug",
+        "cpptools",
       },
     },
   },
